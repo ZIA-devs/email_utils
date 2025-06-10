@@ -1,0 +1,1 @@
+pip install git+https:/github.com/ZIA-devs/email_utils.git
