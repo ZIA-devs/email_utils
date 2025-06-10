@@ -4,7 +4,10 @@ from .error_tracing import get_error_msg
 from typing import Optional
 from os import environ
 
-IN_PROD = environ.get("IN_PROD", "false").lower() == "true"
+IN_PROD = (
+    environ.get("IN_PROD", "false").lower() == "true"
+    or environ.get("IN_PRODUCTION", "false").lower() == "true"
+)
 
 
 def send_success_email() -> None:
