@@ -1,4 +1,4 @@
-from emails import (
+from .emails import (
     send_cancelamento_email,
     send_error_log_email,
     send_faq_email,
