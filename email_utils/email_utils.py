@@ -71,7 +71,10 @@ def _send(
         _attach_file(msg, attachment_path)
 
     if destination not in NORMAL_EMAILS:
-        response = _send_aws(destination, msg)
+        try:
+            response = _send_aws(destination, msg)
+        except Exception:
+            response = _send_smtp_email(destination, msg)
     else:
         response = _send_smtp_email(destination, msg)
 
