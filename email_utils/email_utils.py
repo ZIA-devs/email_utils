@@ -99,8 +99,8 @@ def _send_smtp_email(destination: str, msg: MIMEMultipart):
 
 
 def get_formatted_msg(template: str, variables: dict) -> MIMEText:
-    path = f"/opt/python/templates/{template}.html"
-    with open(path, "r", encoding="utf-8") as file:
+    template_path = f"{path.dirname(__file__)}/templates/{template}.html"
+    with open(template_path, "r", encoding="utf-8") as file:
         html = file.read()
 
     for key, value in variables.items():
