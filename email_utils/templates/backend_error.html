@@ -1,0 +1,15 @@
+<html>
+    <body style="font-family: Arial, sans-serif; background-color: #f9f9f9; padding: 20px;">
+    <div style="max-width: 600px; margin: auto; background-color: #ffffff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+        <h2 style="color: #FF0000;">Erro no Backend</h2>
+        <p>Ocorreu um erro no backend do ZIA.</p>
+        <p><strong>Traceback Limpo:</strong></p>                                   
+        <pre>{clean_tb}</pre>
+        <p><strong>Traceback Completo:</strong></p>
+        <pre>{full_tb}</pre>
+        <p>Por favor, verifique o log acima para mais detalhes.</p>
+        {payload}
+    </div>
+    <p style="color: #f9f9f9" >Tag: ErroBackend</p>
+    </body>
+</html>
