@@ -34,9 +34,9 @@ def send_email(
         )
     except Exception as e:
         if logging:
-            logger.exception("Erro ao enviar e-mail via SES")
+            logger.exception("Erro ao enviar e-mail")
         else:
-            print(f"Erro ao enviar e-mail via SES: {e}")
+            print(f"Erro ao enviar e-mail: {e}")
 
 
 def _attach_file(msg: MIMEMultipart, attachment_path: str) -> None:
@@ -76,9 +76,9 @@ def _send(
         response = _send_smtp_email(destination, msg)
 
     if logging:
-        logger.info("Email enviado com sucesso via SES")
+        logger.info("Email enviado com sucesso")
     else:
-        print("Email enviado com sucesso via SES")
+        print("Email enviado com sucesso")
 
     return response
 
