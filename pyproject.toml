@@ -14,7 +14,7 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]
-where = ["."]
+where = [".", "email_utils"]
 
 [tool.setuptools.package-data]
 "email_utils" = ["templates/*.html"]
