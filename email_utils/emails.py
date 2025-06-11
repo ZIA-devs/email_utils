@@ -3,6 +3,9 @@ from .payload_template import get_payload_template
 from .error_tracing import get_error_msg
 from typing import Optional
 from os import environ
+from dotenv import load_dotenv
+
+load_dotenv(override=True)
 
 IN_PROD = (
     environ.get("IN_PROD", "false").lower() == "true"

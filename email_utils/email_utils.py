@@ -8,7 +8,9 @@ from typing import Optional
 from smtplib import SMTP_SSL
 from os import environ, path
 from loguru import logger
+from dotenv import load_dotenv
 
+load_dotenv(override=True)
 
 ses = boto3_client("ses", region_name=environ.get("AWS_REGION", "sa-east-1"))
 FROM_EMAIL = environ.get("FROM_EMAIL", "")
