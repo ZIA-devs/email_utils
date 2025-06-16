@@ -24,7 +24,7 @@ def send_error_log_email(tb=None, payload: Optional[dict] = None) -> str:
         return clean_tb
 
     payload_msg = get_payload_template(payload) if payload else ""
-    variables = {"clean_tb": clean_tb, "full_tb": full_tb, "payload": payload_msg}
+    variables = {"payload": payload_msg}
     if lambda_name := environ.get("AWS_LAMBDA_FUNCTION_NAME"):
         variables["lambda_name"] = lambda_name
         title = f"Erro no Lambda: {lambda_name}"
@@ -33,6 +33,7 @@ def send_error_log_email(tb=None, payload: Optional[dict] = None) -> str:
     else:
         title = "Erro no Backend"
         template = "backend_error"
+        variables |= {"clean_tb": clean_tb, "full_tb": full_tb}
 
     msg = get_formatted_msg(template, variables)
     if not IN_PROD:
