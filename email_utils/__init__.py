@@ -6,6 +6,7 @@ from .emails import (
     send_novo_cliente_email,
     send_recuperacao_email,
     send_success_email,
+    send_appointment_email,
 )
 
 
@@ -17,4 +18,5 @@ __all__ = [
     "send_novo_cliente_email",
     "send_recuperacao_email",
     "send_success_email",
+    "send_appointment_email",
 ]

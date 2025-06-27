@@ -1,0 +1,31 @@
+<html>
+<body style="font-family: Arial, sans-serif; background-color: #f9f9f9; padding: 20px; margin: 0;">
+    <div style="max-width: 600px; margin: auto; background-color: #ffffff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+        
+        <!-- Cabeçalho do Email -->
+        <h2 style="color: #4CAF50; text-align: center;">Novo Agendamento Recebido!</h2>
+        
+        <!-- Mensagem Introdutória -->
+        <p>Olá!</p>
+        <p>Um novo agendamento foi marcado na plataforma. Confira os detalhes abaixo:</p>
+        
+        <!-- Detalhes do Agendamento -->
+        <div style="background-color: #f4f4f4; padding: 15px; border-radius: 4px; margin-top: 20px; margin-bottom: 20px; font-size: 16px;">
+            <p style="margin: 10px 0;"><strong>🗓️ Serviço:</strong> {servico_agendado}</p><br/>
+            <p style="margin: 10px 0;"><strong>👤 Cliente:</strong> {nome_cliente}</p>
+            <p style="margin: 10px 0;"><strong>📞 Contato:</strong> {numero_cliente}</p><br/>
+            <p style="margin: 10px 0;"><strong>👨‍💼 Profissional:</strong> {nome_funcionario}</p><br/>
+            <p style="margin: 10px 0;"><strong>⏰ Início:</strong> {data_hora_inicio}</p>
+            <p style="margin: 10px 0;"><strong>🏁 Término:</strong> {data_hora_fim}</p>
+        </div>
+        
+        <!-- Mensagem de Encerramento -->
+        <p>Forte abraço,<br><strong>Equipe ZIA</strong></p>
+        
+        <!-- Rodapé -->
+        <div style="text-align: center; margin-top: 20px; padding-top: 10px; border-top: 1px solid #eee;">
+            <p style="color: #888; font-size: 12px;">Esta é uma notificação automática do sistema ZIA.</p>
+        </div>
+    </div>
+</body>
+</html>
