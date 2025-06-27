@@ -90,7 +90,6 @@ def send_appointment_email(
     numero_cliente: str,
     nome_funcionario: str,
     data_hora_inicio: str,
-    data_hora_fim: str,
     email: str,
 ) -> None:
     variables = {
@@ -99,7 +98,6 @@ def send_appointment_email(
         "numero_cliente": numero_cliente,
         "nome_funcionario": nome_funcionario,
         "data_hora_inicio": data_hora_inicio,
-        "data_hora_fim": data_hora_fim,
     }
     msg = get_formatted_msg("novo_agendamento", variables)
     send_email(msg, "Novo Agendamento", destination=email)
