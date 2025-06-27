@@ -82,3 +82,24 @@ def send_cancelamento_email(empresa_name: str, motivo: str) -> None:
     variables = {"empresa_name": empresa_name, "motivo": motivo}
     msg = get_formatted_msg("cancelamento", variables)
     send_email(msg, f"Cancelamento - {empresa_name}")
+
+
+def send_appointment_email(
+    servico_agendado: str,
+    nome_cliente: str,
+    numero_cliente: str,
+    nome_funcionario: str,
+    data_hora_inicio: str,
+    data_hora_fim: str,
+    email: str,
+) -> None:
+    variables = {
+        "servico_agendado": servico_agendado,
+        "nome_cliente": nome_cliente,
+        "numero_cliente": numero_cliente,
+        "nome_funcionario": nome_funcionario,
+        "data_hora_inicio": data_hora_inicio,
+        "data_hora_fim": data_hora_fim,
+    }
+    msg = get_formatted_msg("novo_agendamento", variables)
+    send_email(msg, "Novo Agendamento", destination=email)
