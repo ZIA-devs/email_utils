@@ -77,7 +77,7 @@ def _send(
             response = _send_aws(destination, msg)
         except Exception:
             if logging:
-                logger.exception("Erro ao enviar e-mail via AWS SES, tentando SMTP")
+                logger.warning("Erro ao enviar e-mail via AWS SES, tentando SMTP")
             else:
                 print("Erro ao enviar e-mail via AWS SES, tentando SMTP")
             response = _send_smtp_email(destination, msg)
