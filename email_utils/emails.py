@@ -33,7 +33,7 @@ def send_error_log_email(tb=None, payload: Optional[dict] = None) -> str:
     else:
         title = "Erro no Backend"
         template = "backend_error"
-        variables |= {"clean_tb": clean_tb, "full_tb": full_tb}
+        # variables |= {"clean_tb": clean_tb, "full_tb": full_tb}
 
     msg = get_formatted_msg(template, variables)
     if not IN_PROD:
